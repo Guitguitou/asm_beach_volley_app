@@ -1,0 +1,19 @@
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+/Users/guillaumeimary/Library/asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-qpexva sitelibdir\=./.gem.20250424-46030-qpexva clean
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-qpexva sitelibdir\=./.gem.20250424-46030-qpexva
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-qpexva sitelibdir\=./.gem.20250424-46030-qpexva install
+/opt/homebrew/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20250424-46030-qpexva
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-qpexva sitelibdir\=./.gem.20250424-46030-qpexva clean

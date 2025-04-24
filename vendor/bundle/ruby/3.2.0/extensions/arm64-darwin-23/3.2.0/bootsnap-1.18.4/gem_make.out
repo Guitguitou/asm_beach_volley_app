@@ -1,0 +1,23 @@
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.4/ext/bootsnap
+/Users/guillaumeimary/Library/asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-s74z7m sitelibdir\=./.gem.20250424-46030-s74z7m clean
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-s74z7m sitelibdir\=./.gem.20250424-46030-s74z7m
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-s74z7m sitelibdir\=./.gem.20250424-46030-s74z7m install
+/opt/homebrew/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20250424-46030-s74z7m/bootsnap
+
+current directory: /Users/guillaumeimary/code/Guitguitou/asm_beach_volley_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250424-46030-s74z7m sitelibdir\=./.gem.20250424-46030-s74z7m clean

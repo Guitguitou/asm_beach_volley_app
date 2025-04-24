@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AS Monaco Beach-Volley Admin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <div class="min-h-screen flex flex-col">
+      <header class="bg-red-700 text-white p-4 shadow">
+        <h1 class="text-2xl font-bold">AS Monaco Beach-Volley - Admin</h1>
+      </header>
+
+      <main class="flex-grow p-6">
+        <%= yield %>
+      </main>
+
+      <footer class="bg-gray-100 text-sm text-center text-gray-600 p-2">
+        &copy; <%= Time.now.year %> AS Monaco Beach-Volley
+      </footer>
+    </div>
+  </body>
+</html>
