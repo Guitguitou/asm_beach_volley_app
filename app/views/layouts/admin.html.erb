@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASMBV Admin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+    <header class="bg-red-700 text-white shadow">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold">AS Monaco Beach-Volley</div>
+        <nav class="space-x-6 text-sm font-medium">
+          <%= link_to "Dashboard", admin_dashboard_path, class: "hover:underline" %>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "hover:underline" %>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow px-6 py-8 max-w-7xl mx-auto">
+      <%= yield %>
+    </main>
+
+    <footer class="text-center text-xs text-gray-500 py-4">
+      &copy; <%= Time.now.year %> AS Monaco Beach-Volley
+    </footer>
+  </body>
+</html>
