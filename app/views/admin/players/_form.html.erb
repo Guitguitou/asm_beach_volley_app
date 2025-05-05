@@ -1,0 +1,20 @@
+<%= form_with model: [:admin, player], class: "space-y-4" do |f| %>
+  <div>
+    <%= f.label :first_name, class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_field :first_name, class: "w-full p-2 border rounded" %>
+  </div>
+
+  <div>
+    <%= f.label :last_name, class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_field :last_name, class: "w-full p-2 border rounded" %>
+  </div>
+
+  <div>
+    <%= f.label :phone, class: "block text-sm font-medium text-gray-700" %>
+    <%= f.telephone_field :phone, class: "w-full p-2 border rounded" %>
+  </div>
+
+  <div>
+    <%= f.submit class: "bg-asmbv-red text-white px-4 py-2 rounded hover:bg-asmbv-redDark" %>
+  </div>
+<% end %>

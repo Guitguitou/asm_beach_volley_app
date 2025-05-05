@@ -1,8 +1,4 @@
-class Admin::DashboardController < ApplicationController
-  layout 'admin'
-  before_action :authenticate_user!
-  before_action :require_admin!
-
+class Admin::DashboardController < Admin::BaseController
   def index
     @recent_players = Player.order(created_at: :desc).limit(10)
   end

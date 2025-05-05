@@ -1,0 +1,5 @@
+<h2 class="text-xl font-semibold text-asmbv-red mb-4">
+  <%= action_name == "new" ? "Nouveau joueur" : "Modifier le joueur" %>
+</h2>
+
+<%= render 'form', player: @player %>
