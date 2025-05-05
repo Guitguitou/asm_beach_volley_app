@@ -4,7 +4,7 @@ class Admin::DashboardController < ApplicationController
   before_action :require_admin!
 
   def index
-
+    @recent_players = Player.order(created_at: :desc).limit(10)
   end
 
   private
