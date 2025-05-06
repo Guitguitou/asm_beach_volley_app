@@ -1,4 +1,6 @@
 class Admin::PlayersController < Admin::BaseController
+  before_action :set_player, only: [:edit, :update]
+
   def index
     @players = Player.order(created_at: :desc)
   end
@@ -17,11 +19,9 @@ class Admin::PlayersController < Admin::BaseController
   end
 
   def edit
-    @player = Player.find(params[:id])
   end
 
   def update
-    @player = Player.find(params[:id])
     if @player.update(player_params)
       redirect_to admin_players_path, notice: "Joueur mis à jour"
     else
@@ -33,5 +33,10 @@ class Admin::PlayersController < Admin::BaseController
 
   def player_params
     params.require(:player).permit(:first_name, :last_name, :phone, :user_id)
+  end
+
+  def set_player
+    @player = Player.find_by(id: params[:id])
+    redirect_to admin_players_path, alert: "Joueur introuvable" unless @player
   end
 end
