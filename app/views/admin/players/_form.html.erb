@@ -2,16 +2,19 @@
   <div>
     <%= f.label :first_name, "Prénom", class: "block text-sm font-medium text-gray-700" %>
     <%= f.text_field :first_name, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:border-asmbv-red" %>
+    <%= field_error(@player, :first_name) %>
   </div>
 
   <div>
     <%= f.label :last_name, "Nom", class: "block text-sm font-medium text-gray-700" %>
     <%= f.text_field :last_name, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:border-asmbv-red" %>
+    <%= field_error(@player, :last_name) %>
   </div>
 
   <div>
     <%= f.label :phone, "Téléphone", class: "block text-sm font-medium text-gray-700" %>
     <%= f.telephone_field :phone, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:border-asmbv-red" %>
+    <%= field_error(@player, :phone) %>
   </div>
 
   <div>
