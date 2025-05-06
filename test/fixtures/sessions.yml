@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  starts_at: 2025-05-06 09:01:20
+  terrain: MyString
+  capacity: 1
+
+two:
+  type: 
+  starts_at: 2025-05-06 09:01:20
+  terrain: MyString
+  capacity: 1

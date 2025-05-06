@@ -6,3 +6,5 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+import SessionTypeController from "./session_type_controller"
+application.register("session-type", SessionTypeController)

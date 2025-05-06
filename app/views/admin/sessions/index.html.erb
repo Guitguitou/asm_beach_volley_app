@@ -1,0 +1,31 @@
+<div class="bg-white p-6 rounded-lg shadow w-full">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-xl font-bold text-red-700">Toutes les sessions</h2>
+    <%= link_to "Nouvelle session", new_admin_session_path, class: "bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800 text-sm font-semibold" %>
+  </div>
+
+  <table class="min-w-full text-sm divide-y divide-gray-200">
+    <thead>
+      <tr class="text-left text-gray-600 font-semibold">
+        <th class="px-4 py-2">Type</th>
+        <th class="px-4 py-2">Date</th>
+        <th class="px-4 py-2">Terrain</th>
+        <th class="px-4 py-2">Capacité</th>
+        <th class="px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <% @sessions.each do |session| %>
+        <tr>
+          <td class="px-4 py-2"><%= session.type %></td>
+          <td class="px-4 py-2"><%= l session.starts_at, format: :short %></td>
+          <td class="px-4 py-2"><%= Session::TERRAIN_OPTIONS[session.terrain_before_type_cast] %></td>
+          <td class="px-4 py-2"><%= session.capacity %></td>
+          <td class="px-4 py-2">
+            <%= link_to "Éditer", edit_admin_session_path(session), class: "text-red-700 hover:underline" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
