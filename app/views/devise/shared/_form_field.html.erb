@@ -1,0 +1,12 @@
+<div>
+  <%= f.label field_name, local_assigns[:label_text], class: "block text-sm font-medium text-gray-700" %>
+  <% if local_assigns[:help_text].present? %>
+    <span class="text-xs text-gray-500"><%= help_text %></span>
+  <% end %>
+  <div class="mt-1">
+    <%= f.send field_type, field_name, 
+        local_assigns[:options]&.merge(
+          class: "appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-club-red focus:border-club-red focus:z-10 sm:text-sm"
+        ) || { class: "appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-club-red focus:border-club-red focus:z-10 sm:text-sm" } %>
+  </div>
+</div> 

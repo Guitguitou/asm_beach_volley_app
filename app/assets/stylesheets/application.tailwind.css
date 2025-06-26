@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-club-red: #e21e22;
+    --color-club-red-light: #fef2f2;
+    --color-club-red-dark: #dc2626;
+  }
+}
+
+@layer utilities {
+  .bg-club-red {
+    background-color: var(--color-club-red);
+  }
+  
+  .text-club-red {
+    color: var(--color-club-red);
+  }
+  
+  .border-club-red {
+    border-color: var(--color-club-red);
+  }
+  
+  .focus\:ring-club-red:focus {
+    --tw-ring-color: var(--color-club-red);
+  }
+  
+  .focus\:border-club-red:focus {
+    border-color: var(--color-club-red);
+  }
+  
+  .hover\:bg-club-red-dark:hover {
+    background-color: var(--color-club-red-dark);
+  }
+  
+  .hover\:text-club-red-dark:hover {
+    color: var(--color-club-red-dark);
+  }
+}

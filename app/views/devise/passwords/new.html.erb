@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+<% content_for :icon do %>
+  <%= render "devise/shared/icons" %>
+  <%= yield :key_icon %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<% content_for :title do %>
+  Mot de passe oublié ?
+<% end %>
+
+<% content_for :subtitle do %>
+  Entrez votre email pour recevoir les instructions
+<% end %>
+
+<% content_for :form do %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "space-y-6" }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= render "devise/shared/form_field", 
+        f: f, 
+        field_name: :email, 
+        field_type: :email_field, 
+        label_text: "Email",
+        options: { autofocus: true, autocomplete: "email", placeholder: "votre@email.com" } %>
+
+    <%= render "devise/shared/submit_button", f: f, button_text: "Envoyer les instructions" %>
+  <% end %>
+<% end %>
+
+<%= render "devise/shared/devise_layout" %>

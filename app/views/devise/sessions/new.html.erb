@@ -1,26 +1,43 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+<% content_for :icon do %>
+  <%= render "devise/shared/icons" %>
+  <%= yield :user_icon %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<% content_for :title do %>
+  Connexion
+<% end %>
+
+<% content_for :subtitle do %>
+  Accédez à votre espace personnel
+<% end %>
+
+<% content_for :form do %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+    <%= render "devise/shared/form_field", 
+        f: f, 
+        field_name: :email, 
+        field_type: :email_field, 
+        label_text: "Email",
+        options: { autofocus: true, autocomplete: "email", placeholder: "votre@email.com" } %>
+
+    <%= render "devise/shared/form_field", 
+        f: f, 
+        field_name: :password, 
+        field_type: :password_field, 
+        label_text: "Mot de passe",
+        options: { autocomplete: "current-password", placeholder: "••••••••" } %>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <%= f.check_box :remember_me, class: "h-4 w-4 text-club-red focus:ring-club-red border-gray-300 rounded" %>
+          <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-900" %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/submit_button", f: f, button_text: "Se connecter" %>
+  <% end %>
+<% end %>
+
+<%= render "devise/shared/devise_layout" %>
